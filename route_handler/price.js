@@ -12,6 +12,9 @@ exports.getPirce = async (req, res) => {
     if (parseFloat(price) > 15) {
         mail.sendMail(type,price);
     }
+    setTimeout(()=>{
+
+    },1000*30)
 
     return res.json({
         code: 200,
@@ -19,3 +22,10 @@ exports.getPirce = async (req, res) => {
         data: price
     })
 }
+
+
+// 获取价格接口
+// 添加种类接口
+
+// 没10s请求一次
+// nodejs

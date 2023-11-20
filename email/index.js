@@ -6,7 +6,7 @@ const transporter = nodemailer.createTransport({
     service: 'smtp.qq.com', 
     port: 25,
     auth: {
-        user: '212681712@qq.com', // 发件人的邮箱地址
+        user: 'xxxx@qq.com', // 发件人的邮箱地址
         pass: 'qkreicgbynjabhjc'// 发件人的邮箱密码
     }
 });
@@ -15,9 +15,9 @@ const transporter = nodemailer.createTransport({
 const sendMail = (type,price) => {
     // 设置邮件选项
     const mailOptions = {
-        from: '价格提醒<212681712@qq.com>', // 发件人邮箱地址
-        to: '212681712@qq.com',// 收件人邮箱地址
-        subject: "价格提醒", // 邮件主题
+        from: `${type}价格提醒<xxxx@qq.com>`, // 发件人邮箱地址
+        to: 'xxxx@qq.com',// 收件人邮箱地址
+        subject: `${type}价格提醒`, // 邮件主题
         text: `${type}价格到达${price}` // 邮件正文
     };
 
