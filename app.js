@@ -11,5 +11,7 @@ app.use(bodyParser.json());
 const priceRouter = require("./route/price.js");
 app.use("/price",priceRouter);
 
+const typeRouter = require("./route/type.js");
+app.use("/type",typeRouter);
 
 app.listen(3000, console.log("server is running at http://127.0.0.1:3000"));
